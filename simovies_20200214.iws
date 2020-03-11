@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c2b4da3-324b-4706-a34c-97282417fc77" name="Default Changelist" comment="" />
+    <list default="true" id="8c2b4da3-324b-4706-a34c-97282417fc77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/AbstractTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/BetaRobotStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/FireTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/Goal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/MoveGoal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/MoveToTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/ParallelTaskExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/Strategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/TaskExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/TurnGoal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/TurnTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/CampFire.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/CampFire.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/SurroundedBrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/SurroundedBrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simovies_20200214.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/simovies_20200214.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simovies_20200214.iws" beforeDir="false" afterPath="$PROJECT_DIR$/simovies_20200214.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/CampFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/CampFire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/Robot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/SurroundedBrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/SurroundedBrain.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -24,11 +49,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1XnGIymv9bO0zv6789ozSBjRWS6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -43,6 +76,9 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="algorithms" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="algorithms.strategy" />
     </key>
   </component>
   <component name="RunManager">
@@ -85,6 +121,10 @@
       <workItem from="1581677174895" duration="1203000" />
       <workItem from="1582273718149" duration="9119000" />
       <workItem from="1582596040242" duration="8000" />
+      <workItem from="1582886605663" duration="2905000" />
+      <workItem from="1583501869645" duration="14183000" />
+      <workItem from="1583747856027" duration="1404000" />
+      <workItem from="1583827708950" duration="5000" />
     </task>
     <servers />
   </component>
@@ -100,44 +140,61 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="103" y="3" width="1089" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1581674452190" />
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1582280030492">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1583515681794">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582280030492" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1582886681911">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1583515681794" />
+    <state x="438" y="226" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583505591792">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582886681911" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1582886681911">
+    <state x="438" y="226" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1583505591792" />
+    <state x="393" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583508236942">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582886681911" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1582886681911">
+    <state x="393" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1583508236942" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1583516028084">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582886681911" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1582886681911">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583516028084" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1583516028084">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582886681911" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583516028084" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1583516028084">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583516028084" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1583516028084">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583516028084" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1583509180368">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583509180368" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1583509180368">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1583509180368" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1583509180368">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1583509180368" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1583509180368">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1583509180368" />
     <state x="336" y="72" width="609" height="536" key="find.popup" timestamp="1581675550376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="336" y="72" width="609" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1581675550376" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1581675591957">
+    <state x="297" y="151" key="run.anything.popup" timestamp="1583508637972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1581675591957" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/jars/simulator.jar!/supportGUI/Viewer.class</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1583508637972" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583515764918">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583515764918" />
   </component>
 </project>

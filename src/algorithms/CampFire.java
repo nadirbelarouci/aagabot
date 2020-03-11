@@ -62,7 +62,6 @@ public class CampFire extends Brain {
         if (endTaskCounter > 0) {
             endTaskCounter--;
             move();
-            return;
         } else {
             if (taskOne) taskOne = false;
             else {
@@ -83,7 +82,6 @@ public class CampFire extends Brain {
                 endTaskDirection = getHeading() - 0.5 * Math.PI;
                 stepTurn(Parameters.Direction.LEFT);
             }
-            return;
         }
     }
 
