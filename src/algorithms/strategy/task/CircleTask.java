@@ -21,7 +21,7 @@ public class CircleTask extends AbstractTask {
         executor = new TaskExecutor();
         CircleGoal goal = (CircleGoal) getGoal();
         double i, angle, x1, y1;
-        for (i = 0; i < 400; i += (360 / 36)) {
+        for (i = 0; i < 360; i += (360 / 36)) {
             angle = i;
             x1 = goal.r * cos(angle * PI / 180);
             y1 = goal.r * sin(angle * PI / 180);

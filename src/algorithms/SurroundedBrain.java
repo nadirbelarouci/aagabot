@@ -6,7 +6,10 @@
  * ******************************************************/
 package algorithms;
 
+import algorithms.strategy.task.RepeatableTask;
 import algorithms.strategy.Robot;
+import algorithms.strategy.task.CircleGoal;
+import algorithms.strategy.task.CircleTask;
 import algorithms.strategy.task.ExploreTask;
 import algorithms.strategy.task.Task;
 import characteristics.Parameters;
@@ -19,7 +22,7 @@ public class SurroundedBrain extends Brain {
     private Robot two;
 
     private Task explorer = new ExploreTask();
-
+    private Task circle = new RepeatableTask(new CircleTask(new CircleGoal(200, 1000, 1000)));
 
     public SurroundedBrain() {
 
@@ -39,7 +42,7 @@ public class SurroundedBrain extends Brain {
 
     public void step() {
         if (one != null) {
-            explorer.execute(one);
+            circle.execute(one);
         } else if (two != null) {
             explorer.execute(two);
         }
