@@ -1,4 +1,4 @@
-package algorithms.strategy;
+package algorithms.strategy.task;
 
 public abstract class AbstractTask implements Task {
     private Goal goal;
@@ -11,4 +11,7 @@ public abstract class AbstractTask implements Task {
         return goal;
     }
 
+    public void setGoal(Goal goal) {
+        this.goal = goal;
+    }
 }

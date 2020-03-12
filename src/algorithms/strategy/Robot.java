@@ -76,7 +76,7 @@ public class Robot {
     }
 
 
-    private double getTheta() {
+    public double getTheta() {
         double result = brain.getHeading();
 
         while (result < 0) result += 2 * Math.PI;

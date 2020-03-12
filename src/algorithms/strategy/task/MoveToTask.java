@@ -1,11 +1,18 @@
-package algorithms.strategy;
+package algorithms.strategy.task;
 
-public class MoveToTask extends AbstractTask  {
+import algorithms.strategy.Robot;
+
+public class MoveToTask extends AbstractTask {
 
     private TaskExecutor executor;
 
     public MoveToTask(MoveGoal goal) {
         super(goal);
+    }
+
+    @Override
+    public Task copy() {
+        return new MoveToTask((MoveGoal) getGoal());
     }
 
     private void initialize(Robot robot) {
@@ -30,7 +37,7 @@ public class MoveToTask extends AbstractTask  {
 
         public SimpleMoveTask(MoveGoal goal, double ox, double oy) {
             super(goal);
-            MoveGoal g = (MoveGoal) goal;
+            MoveGoal g = goal;
             distance = Math.sqrt(Math.pow(g.x - ox, 2) + Math.pow(g.y - oy, 2));
         }
 
@@ -41,6 +48,9 @@ public class MoveToTask extends AbstractTask  {
             return distance < 20;
         }
 
-
+        @Override
+        public Task copy() {
+            throw new UnsupportedOperationException();
+        }
     }
 }

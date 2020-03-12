@@ -1,4 +1,4 @@
-package algorithms.strategy;
+package algorithms.strategy.task;
 
 public class TurnGoal implements Goal {
     public final double theta;

@@ -6,8 +6,9 @@
  * ******************************************************/
 package algorithms;
 
-import algorithms.strategy.*;
-import characteristics.IRadarResult;
+import algorithms.strategy.Robot;
+import algorithms.strategy.task.ExploreTask;
+import algorithms.strategy.task.Task;
 import characteristics.Parameters;
 import robotsimulator.Brain;
 
@@ -16,27 +17,31 @@ public class SurroundedBrain extends Brain {
     private static int id = 0;
     private Robot one;
     private Robot two;
-    private Robot three;
-    private Task task1 = new MoveToTask(new MoveGoal(2500, 200));
 
-    private TaskExecutor executor = new TaskExecutor();
+    private Task explorer = new ExploreTask();
+
 
     public SurroundedBrain() {
-        executor.addAll(task1);
+
     }
 
     public void activate() {
         id++;
         switch (id) {
             case 1:
-                one = new Robot(this, Parameters.teamAMainBot1InitX, Parameters.teamAMainBot1InitY, Parameters.teamAMainBotSpeed);
+                one = new Robot(this, Parameters.teamASecondaryBot1InitX, Parameters.teamASecondaryBot1InitY, Parameters.teamASecondaryBotSpeed);
+                break;
+            case 2:
+                two = new Robot(this, Parameters.teamASecondaryBot2InitX, Parameters.teamASecondaryBot2InitY, Parameters.teamASecondaryBotSpeed);
                 break;
         }
     }
 
     public void step() {
         if (one != null) {
-            executor.execute(one);
+            explorer.execute(one);
+        } else if (two != null) {
+            explorer.execute(two);
         }
     }
 
