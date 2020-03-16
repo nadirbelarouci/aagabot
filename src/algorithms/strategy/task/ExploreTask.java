@@ -14,7 +14,7 @@ public class ExploreTask extends AbstractTask implements Task {
     }
 
     private static MoveGoal generate() {
-        return new MoveGoal(random.nextInt(4000), random.nextInt(2000));
+        return new MoveGoal(random.nextInt(3000), random.nextInt(2000));
     }
 
     @Override

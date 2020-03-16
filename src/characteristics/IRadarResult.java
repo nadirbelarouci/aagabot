@@ -6,7 +6,35 @@
  * ******************************************************/
 package characteristics;
 
+import robotsimulator.RadarResult;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public interface IRadarResult {
+    Pattern pattern = Pattern.compile("(.*);(.*);(.*);(.*)");
+
+    static RadarResult parse(String message) {
+        Matcher matcher = pattern.matcher(message);
+        if (matcher.find()) {
+            return new RadarResult(
+                    IRadarResult.Types.valueOf(matcher.group(1)),
+                    Double.parseDouble(matcher.group(2)),
+                    Double.parseDouble(matcher.group(3)),
+                    Double.parseDouble(matcher.group(4)));
+
+        }
+        throw new RuntimeException("PATTERN ERROR in: " + message);
+    }
+
+    static String parse(IRadarResult result) {
+
+        return result.getObjectType() + ";"
+                + result.getObjectDirection() + ";"
+                + result.getObjectDistance() + ";"
+                + result.getObjectRadius();
+    }
+
     //--------------------------------------------------------//
     //---SIMULATOR-PROVIDED-METHODS---------------------------//
     //------implemented-in-robotsimulator.FrontSensorResult---//

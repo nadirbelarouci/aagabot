@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c2b4da3-324b-4706-a34c-97282417fc77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/task/RepeatableTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/task/RadarDetectionTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/strategy/task/RadarReceptionTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/SurroundedBrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/SurroundedBrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/simovies_20200214/algorithms/strategy/RepeatableTask.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simovies_20200214.iws" beforeDir="false" afterPath="$PROJECT_DIR$/simovies_20200214.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/SurroundedBrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/SurroundedBrain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/strategy/task/CircleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/strategy/task/CircleTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/strategy/task/ExploreTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/strategy/task/ExploreTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characteristics/IRadarResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characteristics/IRadarResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -110,7 +115,9 @@
       <workItem from="1583747856027" duration="1404000" />
       <workItem from="1583827708950" duration="5000" />
       <workItem from="1583936458521" duration="12220000" />
-      <workItem from="1584027495998" duration="1747000" />
+      <workItem from="1584027495998" duration="2385000" />
+      <workItem from="1584122738278" duration="4675000" />
+      <workItem from="1584298777492" duration="8033000" />
     </task>
     <task id="LOCAL-00001" summary="add tasks">
       <created>1583936476296</created>
@@ -138,14 +145,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="103" y="3" width="1089" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1581674452190" />
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1584030141021">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1584133599384">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1584030141021" />
-    <state x="438" y="226" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583505591792">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1584133599384" />
+    <state x="321" y="69" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584298829454">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="226" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1583505591792" />
+    <state x="321" y="69" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1584298829454" />
+    <state x="438" y="226" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584134187645">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="226" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1584134187645" />
     <state x="393" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583508236942">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -154,38 +165,46 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="219" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1583936485080" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1584030409513">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1584308193823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584030409513" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1584030409513">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584308193823" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1584308193823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584030409513" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1584030409513">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584308193823" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1584308193823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584030409513" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1584030409513">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584308193823" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1584308193823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584030409513" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1584019147377">
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584308193823" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1584303504824">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584019147377" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1584019147377">
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584303504824" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1584303504824">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1584019147377" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1584019147377">
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1584303504824" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1584303504824">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1584019147377" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1584019147377">
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1584303504824" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1584303504824">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584019147377" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584303504824" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1584230173625">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1584230173625" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1584308178700">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1584308178700" />
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583939737763">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -202,10 +221,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1583945804487" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1584030272452">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1584299197361">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1584030272452" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1584299197361" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

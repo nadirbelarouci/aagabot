@@ -12,29 +12,41 @@ public class CircleTask extends AbstractTask {
         super(goal);
     }
 
+    public MoveGoal getCircleLineIntersectionPoint(MoveGoal robot, CircleGoal circle) {
+        double vX = robot.x - circle.x;
+        double vY = robot.y - circle.y;
+        double magV = sqrt(vX * vX + vY * vY);
+        double aX = circle.x + vX / magV * circle.r;
+        double aY = circle.y + vY / magV * circle.r;
+        return new MoveGoal(aX, aY);
+
+    }
+
     @Override
     public Task copy() {
         return new CircleTask((CircleGoal) getGoal());
     }
 
-    private void initialize() {
+    private void initialize(Robot robot) {
         executor = new TaskExecutor();
         CircleGoal goal = (CircleGoal) getGoal();
-        double i, angle, x1, y1;
-        for (i = 0; i < 360; i += (360 / 36)) {
-            angle = i;
-            x1 = goal.r * cos(angle * PI / 180);
-            y1 = goal.r * sin(angle * PI / 180);
-            executor.add(new MoveToTask(new MoveGoal(goal.x + x1, goal.y + y1)));
+        double i, angle, x, y;
+        MoveGoal start = getCircleLineIntersectionPoint(new MoveGoal(robot.getX(), robot.getY()), goal);
+
+        angle = Math.acos((start.x - goal.x) / (double) goal.r) * 180 / PI;
+        for (i = angle; i < angle + 360; i += 10) {
+
+            x = goal.r * cos(i * PI / 180) + goal.x;
+            y = goal.r * sin(i * PI / 180) + goal.y;
+
+            executor.add(new MoveToTask(new MoveGoal(x, y)));
         }
-
-
     }
 
     @Override
     public boolean execute(Robot robot) {
         if (executor == null) {
-            initialize();
+            initialize(robot);
         }
         return executor.execute(robot);
     }
