@@ -111,6 +111,9 @@ public class Robot {
     public void fire() {
         brain.fire(fireTheta);
     }
+    public void fire(double fireTheta) {
+        brain.fire(fireTheta);
+    }
 
     public double getFireDirection() {
         return fireTheta;

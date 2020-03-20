@@ -3,11 +3,12 @@ package algorithms.strategy.task;
 import algorithms.strategy.Robot;
 import characteristics.IRadarResult;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class RadarReceptionTask implements Task {
-    private List<IRadarResult> messages;
+    private List<MoveGoal> messages = new ArrayList<>();
 
     @Override
     public boolean execute(Robot robot) {
@@ -19,7 +20,7 @@ public class RadarReceptionTask implements Task {
         return messages.size() > 0;
     }
 
-    public List<IRadarResult> getMessages() {
+    public List<MoveGoal> getMessages() {
         return messages;
     }
 

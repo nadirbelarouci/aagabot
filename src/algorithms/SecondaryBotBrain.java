@@ -11,25 +11,15 @@ import algorithms.strategy.task.*;
 import characteristics.Parameters;
 import robotsimulator.Brain;
 
-public class SurroundedBrain extends Brain {
+public class SecondaryBotBrain extends Brain {
     //---PARAMETERS---//
     private static int id = 0;
     private Robot one;
     private Robot two;
 
     private Task explorer = new ExploreTask();
-
-    private Task c1 = new CircleTask(new CircleGoal(200, 1000, 1000));
-    private Task c2 = new CircleTask(new CircleGoal(100, 1400, 1500));
-    private Task c3 = new CircleTask(new CircleGoal(100, 200, 300));
-    private TaskExecutor tasks = new TaskExecutor();
     private Task radarDetection = new RadarDetectionTask();
-    private RadarReceptionTask radarReception = new RadarReceptionTask();
-
-    public SurroundedBrain() {
-        tasks.addAll(c1, c2, c3);
-
-    }
+    private Task move = new MoveToTask(new MoveGoal(2000,300));
 
     public void activate() {
         id++;
@@ -45,8 +35,10 @@ public class SurroundedBrain extends Brain {
 
     public void step() {
         if (one != null) {
-            tasks.execute(one);
+            radarDetection.execute(one);
+            move.execute(one);
         } else if (two != null) {
+            radarDetection.execute(two);
             explorer.execute(two);
         }
     }

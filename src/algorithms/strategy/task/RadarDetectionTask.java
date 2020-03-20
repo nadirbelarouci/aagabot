@@ -7,7 +7,9 @@ public class RadarDetectionTask implements Task {
     @Override
     public boolean execute(Robot robot) {
         robot.detectRadar().stream()
-                .map(IRadarResult::parse)
+                .filter(result -> result.getObjectType() == IRadarResult.Types.OpponentMainBot
+                || result.getObjectType() == IRadarResult.Types.OpponentSecondaryBot)
+                .map(result -> IRadarResult.parse(result, robot))
                 .forEach(robot::broadcast);
         return false;
     }

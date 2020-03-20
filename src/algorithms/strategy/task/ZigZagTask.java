@@ -18,12 +18,12 @@ public class ZigZagTask extends AbstractTask {
     private void initialize(Robot robot) {
         executor = new TaskExecutor();
         MoveGoal goal = (MoveGoal) getGoal();
-        int N = 4;
+        int N = 5;
         int x1 = (int) robot.getX();
         int x2 = goal.x;
         int y1 = (int) robot.getY();
         int y2 = goal.y;
-        int w = 50;
+        int w = 100;
         double inv = 0.25 / (double) N;
         double dx = (x2 - x1) * inv,
                 dy = (y2 - y1) * inv;
