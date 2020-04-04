@@ -4,7 +4,10 @@ public class TurnGoal implements Goal {
     public final double theta;
 
     public TurnGoal(double theta) {
-        this.theta = theta;
+    	double r = theta;
+    	while(r < 0) r += 2 * Math.PI;
+    	while(r > 2 * Math.PI) r -= 2 * Math.PI;
+        this.theta = r;
     }
 
     public TurnGoal(double oX, double oY, double x, double y) {

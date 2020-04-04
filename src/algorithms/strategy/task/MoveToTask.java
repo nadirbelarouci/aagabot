@@ -9,6 +9,10 @@ public class MoveToTask extends AbstractTask {
     public MoveToTask(MoveGoal goal) {
         super(goal);
     }
+    
+    public MoveToTask(double distX, double distY) {
+    	super(new MoveGoal(distX, distY));
+    }
 
     @Override
     public Task copy() {
@@ -20,7 +24,6 @@ public class MoveToTask extends AbstractTask {
         MoveGoal goal = (MoveGoal) getGoal();
         executor.add(new TurnTask(new TurnGoal(robot.getX(), robot.getY(), goal.x, goal.y)));
         executor.add(new SimpleMoveTask(goal, robot.getX(), robot.getY()));
-
     }
 
     @Override

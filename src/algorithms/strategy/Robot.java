@@ -11,7 +11,8 @@ public class Robot {
     private static final double EPSILON = 0.09;
     private static final double POSITION_DIFF = 10;
     private final double speed;
-
+    
+    private int id;
     private double x;
     private double y;
     private double theta;
@@ -23,6 +24,11 @@ public class Robot {
         this.x = x;
         this.y = y;
         this.speed = speed;
+    }
+    
+    public Robot(IBrain brain, int id, double x, double y, double speed) {
+    	this(brain, x, y, speed);
+    	this.id = id;
     }
 
     public void sendLogMessage(String message) {
@@ -75,7 +81,10 @@ public class Robot {
         return isSameDirection(robot.theta);
     }
 
-
+    public int getId() {
+    	return id;
+    }
+    
     public double getTheta() {
         double result = brain.getHeading();
 
